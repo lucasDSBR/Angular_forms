@@ -1,0 +1,16 @@
+<form [formGroup]="myForm">
+	<label for="name">Nome:</label>
+	<input type="text" name="name" formControlName="name" id="name">
+	<label for="email">E-mail:</label>
+	<input type="email" name="email" formControlName="email" id="email">
+	<label for="password">Estados:</label>
+	<select formControlName="states">
+		<option *ngFor="let state of states" [value]="state.sigla">{{state.name}}</option>
+	</select>
+
+	<label for="empregado">Está empregado ?:</label>
+	<input type="checkbox" name="empregado" formControlName="empregado" id="empregado">
+
+	<label for="empregado">Sexo:</label>
+	<input type="radio" name="empregado" formControlName="empregado" id="empregado">
+</form>
